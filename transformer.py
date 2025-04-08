@@ -19,17 +19,6 @@ validation_data = []
 validation_labels = []
 
 
-def test_pytorch_cuda():
-    """
-    Quick test to check if PyTorch with CUDA is installed correctly.
-    """
-    if torch.cuda.is_available():
-        print("PyTorch with CUDA is installed correctly!")
-        print(f"CUDA Device Name: {torch.cuda.get_device_name(0)}")
-    else:
-        print("CUDA is not available. Please check your installation.")
-
-
 def load_midi_data():
     """
     Load all MIDI tensors into their respective list of tensors along with their labels. 
@@ -81,10 +70,30 @@ def load_midi_data():
     print(f"Loaded {len(training_data)} training tensors, {len(test_data)} test tensors, and {len(validation_data)} validation tensors.")
 
 
+class MIDITransformer(nn.Module):
+    """
+    Transformer model for MIDI data.
+    """
+    def __init__(self):
+        super(MIDITransformer, self).__init__()
+
+        # Model Architecture
+        #TODO: Define the transformer model architecture here
+    
+    def forward(self, x):
+        # Forward pass
+        #TODO: Define the forward pass here
+        pass
+
 
 if __name__ == "__main__":
-    # Test if PyTorch with CUDA is installed correctly
-    test_pytorch_cuda()
+    # Get the device
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using {device} device") #! If this prints "Using cpu device", then you are not using the GPU
 
     # Load the MIDI tensor data
+    # Note that the dataset is only 2.4MB, so it should fitting on any modern GPU
     load_midi_data()
+
+    # Define the model
+    model = MIDITransformer().to(device)

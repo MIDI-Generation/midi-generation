@@ -92,7 +92,7 @@ if __name__ == "__main__":
     print(f"Using {device} device") #! If this prints "Using cpu device", then you are not using the GPU
 
     # Load the MIDI tensor data
-    # Note that the dataset is only 2.4MB, so it should fitting on any modern GPU
+    # Note that the dataset is only 2.4MB, so it should fit on any modern GPU
     load_midi_data()
 
     # Define the model

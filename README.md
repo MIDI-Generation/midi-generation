@@ -2,7 +2,7 @@
 Midi Generation uses a transformer-based VAE to conditionally generate classical music MIDI files based on a given composer. Overall, the current version of the model has weak label conditioning and generates music that sounds similar regardless of composer. However, the actual sound of this music is not too bad. We recommend trying out a view of the .mid files included in the git.
 # Model Architecture
 ![image](https://github.com/user-attachments/assets/9bb9e6cd-8b0f-4856-a8bf-c0a474364a6e)
-# Comapring Model Accuracy
+# Comparing Model Accuracy
 ![image](https://github.com/user-attachments/assets/42a81f12-50fa-4bdc-9fe1-912bc3a729b5)
 # Comparing Model Relative Cosine Similarity
 ![image](https://github.com/user-attachments/assets/3bda05a3-1e00-4c26-8d54-fee3aa8a93cc)

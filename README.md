@@ -1,4 +1,5 @@
 # midi-generation
+Midi Generation uses a transformer-based VAE to conditionally generate classical music MIDI files based on a given composer. Overall, the current version of the model has weak label conditioning and generates music that sounds similar regardless of composer. However, the actual sound of this music is not too bad. We recommend trying out a view of the .mid files included in the git.
 
 Remember to use `git lfs pull` to download the MIDI tensor files (and to make sure you have git lfs installed). A regular `git pull` will not download them.
 
@@ -18,7 +19,7 @@ To run MIDIVAE_new.ipynb, we strongly suggest following the below proceedure:
     - GPU compute capability: 8.0
 4. Click `launch` and wait for your session to begin
 5. Once your session begins, run all cells and a new model will begin training.
-6. Once the model is trained, it will automatically save, then run inference to generate a .MID music file
-7. To listen to this file, install prettyMIDI with pip, download it and run it using your favorite MIDI synthesizer or convert it to a .WAV with [a free online tool such as this one](https://www.zamzar.com/convert/midi-to-wav/). You can then play the WAV on virtually any music playing app such as VLC or Windows Media Player
+6. Once the model is trained, it will automatically save, install prettyMIDI with pip, then run inference to generate a .MID music file
+7. To listen to this file, download it and run it using your favorite MIDI synthesizer or convert it to a .WAV with [a free online tool such as this one](https://www.zamzar.com/convert/midi-to-wav/). You can then play the WAV on virtually any music playing app such as VLC or Windows Media Player
 
 Warning: We highly recommend AGAINST running MIDIVAE.ipynb in Google Colab. Google Colab has a different configuration for PyTorch than the SCC's academic-ml/spring-2025 they are NOT cross-compatible. 

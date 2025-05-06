@@ -62,7 +62,7 @@ To run the pre-trained model, you need to:
 3. Run the model with the sequence. After a few seconds, the model will generate an output of likelihoods, and tell you the top 1 and top 3.
 4. You're done.
 
-## Generating preprocessed data (MIDI_preprocess.ipynb)
+## Generating preprocessed data using MIDI_preprocess.ipynb
 1. Upload two copies of the MAESTRO dataset to a Google Drive account you have access to and make sure the directory is named according to the directory specified in the data_directory variable. Also make sure that the name output .csv file of the initial token generation matches the name of the file in input_csv, and that the directory specified in the pm variable in the final cell matches the second copy of the dataset you uploaded. 
 2.  Run each cell in order from top to bottom using Google Colab.
 3. The output .csv should be in the content directory.

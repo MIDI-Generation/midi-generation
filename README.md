@@ -40,3 +40,24 @@ To run MIDIVAE_new.ipynb, we strongly suggest following the below proceedure:
 7. To listen to this file, download it and run it using your favorite MIDI synthesizer or convert it to a .WAV with [a free online tool such as this one](https://www.zamzar.com/convert/midi-to-wav/). You can then play the WAV on virtually any music playing app such as VLC or Windows Media Player
 
 Warning: We highly recommend AGAINST running MIDIVAE.ipynb in Google Colab. Google Colab has a different configuration for PyTorch than the SCC's academic-ml/spring-2025 they are NOT cross-compatible. 
+
+
+## Using GRU Classifier (music_classifier.py)
+
+To run the file, you should be connected to a GPU. The model was trained locally using an NVIDIA 4070 Ti SUPER, but it will work on any CUDA capable device. 
+Training 10 epochs with: 
+Embedding layer size: 128
+Hidden size: 128
+Layer number: 2
+To train the model, you need to:
+1. Load in the dataset (as tokenized sequences)
+2. Run the code.
+3. The model should take about 1.5-2 hours to finish training.
+4. Once done, the model will run the evaluation code to test itself out. It will print the accuracies afterwards.
+
+
+To run the pre-trained model, you need to:
+1. Load in pre-trained model
+2. Load in the tokenized MIDI sequence to test out.
+3. Run the model with the sequence. After a few seconds, the model will generate an output of likelihoods, and tell you the top 1 and top 3.
+4. You're done. 

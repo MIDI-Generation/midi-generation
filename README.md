@@ -1,5 +1,17 @@
 # midi-generation
 Midi Generation uses a transformer-based VAE to conditionally generate classical music MIDI files based on a given composer. Overall, the current version of the model has weak label conditioning and generates music that sounds similar regardless of composer. However, the actual sound of this music is not too bad. We recommend trying out a view of the .mid files included in the git.
+# Model Architecture
+![image](https://github.com/user-attachments/assets/9bb9e6cd-8b0f-4856-a8bf-c0a474364a6e)
+# Comapring Model Accuracy
+![image](https://github.com/user-attachments/assets/42a81f12-50fa-4bdc-9fe1-912bc3a729b5)
+# Comparing Model Relative Cosine Similarity
+![image](https://github.com/user-attachments/assets/3bda05a3-1e00-4c26-8d54-fee3aa8a93cc)
+# Visualization of Latent Space
+![image](https://github.com/user-attachments/assets/ddce73ab-afb7-4269-af5f-d2c2ee6a384b)
+# Comparing Model Silhouette Score
+![image](https://github.com/user-attachments/assets/6b94ebb8-bad1-4926-9a49-f520e8aacd04)
+# Confusion Matrix of Best Model
+![image](https://github.com/user-attachments/assets/09ab8cef-3498-4d80-a851-3fb95a321a5b)
 
 Remember to use `git lfs pull` to download the MIDI tensor files (and to make sure you have git lfs installed). A regular `git pull` will not download them.
 
